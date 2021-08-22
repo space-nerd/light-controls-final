@@ -3,38 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { Brightness } from "../components/Brightness";
 import ColorChange from "../components/ColorChange";
+import { NavBar } from "../components/NavBar";
 import { Temp } from "../components/Temp";
-import styles from "../styles/Home.module.css";
-
-import Govee from "../node-govee-led/index";
-
-const Lamp = new Govee({
-  apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
-  mac: "1d:e7:7c:a6:b0:13:b8:e9",
-  model: "H6003",
-});
-
-const Desk = new Govee({
-  apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
-  mac: "75:b5:7c:a6:b0:13:ba:9e",
-  model: "H6003",
-});
-
-function LampTurnOn() {
-  Lamp.turnOn();
-}
-
-function LampTurnOff() {
-  Lamp.turnOff();
-}
-
-function DeskTurnOn() {
-  Desk.turnOn();
-}
-
-function DeskTurnOff() {
-  Desk.turnOff();
-}
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -49,31 +20,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>On/Off Control</h1>
-        </header>
+        <NavBar />
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Turn On</h3>
-            <button onClick={LampTurnOn} className={styles.lightButton}>
-              Lamp
-            </button>
-            <button onClick={DeskTurnOn} className={styles.lightButton}>
-              Desk
-            </button>
-          </div>
-
-          <div className={styles.card}>
-            <h3>Turn Off</h3>
-            <button onClick={LampTurnOff} className={styles.lightButton}>
-              Lamp
-            </button>
-            <button onClick={DeskTurnOff} className={styles.lightButton}>
-              Desk
-            </button>
-          </div>
-        </div>
         <Brightness />
 
         <ColorChange />
