@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Home.module.scss";
 import { Card } from "./Card";
 
-const ColorChange: React.FC<{}> = ({}) => {
+const ColorChange: React.FC<{}> = () => {
   return (
     <div className={styles.container}>
       <h1>Color Control</h1>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Brightness } from "../components/Brightness";
 import ColorChange from "../components/ColorChange";
+import { DeviceState } from "../components/DeviceState";
 import { NavBar } from "../components/NavBar";
 import { Temp } from "../components/Temp";
 import styles from "../styles/Home.module.scss";
@@ -21,6 +22,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <NavBar />
+
+        <DeviceState deviceName="Lamp" />
 
         <Brightness />
 
