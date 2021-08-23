@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.navbar {
+  width: 100%;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -33,7 +37,7 @@
 }
 
 .name {
-  color: #0070f3;
+  color: #0066ff;
   text-decoration: none;
   margin: 0;
   line-height: 1.15;
@@ -68,8 +72,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #0066f3;
+  border-color: #0066ff;
 }
 
 .card h3 {
@@ -94,8 +98,8 @@
 .lightButton:hover,
 .lightButton:focus,
 .lightButton:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #0066ff;
+  border-color: #0066ff;
 }
 
 .logo {
@@ -113,8 +117,4 @@
   width: 10%;
   height: 10%;
   margin-right: 18.75rem;
-}
-
-.header {
-  height: 50%
 }
