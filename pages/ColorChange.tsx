@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/Home.module.scss";
-import { Card } from "./Card";
+import { Card } from "../components/Card";
 
-const ColorChange: React.FC<{}> = () => {
+export default function ColorChange() {
   return (
     <div className={styles.container}>
       <h1>Color Control</h1>
@@ -88,6 +88,4 @@ const ColorChange: React.FC<{}> = () => {
       </div>
     </div>
   );
-};
-
-export default ColorChange;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/Home.module.scss";
-import { Card } from "./Card";
+import { Card } from "../components/Card";
 
-export const Brightness: React.FC<{}> = ({}) => {
+export default function Brightness() {
   return (
     <div className={styles.container}>
       <h1>Brightness Control</h1>

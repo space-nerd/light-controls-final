@@ -1,11 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
-import { Brightness } from "../components/Brightness";
-import ColorChange from "../components/ColorChange";
-import { DeviceState } from "../components/DeviceState";
+import { Card } from "../components/Card";
 import { NavBar } from "../components/NavBar";
-import { Temp } from "../components/Temp";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -21,29 +17,27 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Card
+          name="Turn On"
+          onOrOff="on"
+          brightness={false}
+          temp={false}
+          color={false}
+          cardClassName={styles.card}
+          buttonClassName={styles.lightButton}
+        />
+        <Card
+          name="Turn Off"
+          onOrOff="off"
+          brightness={false}
+          temp={false}
+          color={false}
+          cardClassName={styles.card}
+          buttonClassName={styles.lightButton}
+        />
+
         <NavBar />
-
-        <DeviceState deviceName="Lamp" />
-
-        <Brightness />
-
-        <ColorChange />
-
-        <Temp />
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
