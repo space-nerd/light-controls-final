@@ -25,3 +25,5 @@ yarn-error.log*
 Dockerfile
 *.dockerignore
 
+Replit
+*.replit
