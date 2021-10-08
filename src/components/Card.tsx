@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Home.module.scss";
+import "../App.scss";
 import Govee from "../node-govee-led/index";
 
 const Lamp = new Govee({
@@ -20,10 +20,10 @@ function LampTask(
   temp: number | false,
   color: string | false
 ) {
-  if (onOff && onOff == "on") {
+  if (onOff && onOff === "on") {
     Lamp.turnOn();
   }
-  if (onOff && onOff == "off") {
+  if (onOff && onOff === "off") {
     Lamp.turnOff();
   }
   if (brightness) {
@@ -35,6 +35,7 @@ function LampTask(
   if (color) {
     Lamp.setColor(color);
   }
+  Lamp.getState().then(state => console.log(state));
 }
 
 function DeskTask(
@@ -43,10 +44,10 @@ function DeskTask(
   temp: number | false,
   color: string | false
 ) {
-  if (onOff && onOff == "on") {
+  if (onOff && onOff === "on") {
     Desk.turnOn();
   }
-  if (onOff && onOff == "off") {
+  if (onOff && onOff === "off") {
     Desk.turnOff();
   }
   if (brightness) {
@@ -58,6 +59,7 @@ function DeskTask(
   if (color) {
     Desk.setColor(color);
   }
+  Desk.getState().then(state => console.log(state));
 }
 
 interface CardProps {
@@ -69,6 +71,7 @@ interface CardProps {
   buttonClassName: string;
   cardClassName: string;
 }
+
 
 export const Card: React.FC<CardProps> = ({
   name,

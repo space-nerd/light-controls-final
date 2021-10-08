@@ -1,21 +1,21 @@
 import React from "react";
-import styles from "../styles/Home.module.scss";
+import "../App.scss";
 import { Card } from "./Card";
 
-const ColorChange: React.FC<{}> = ({}) => {
+const ColorChange: React.FC<{}> = () => {
   return (
-    <div className={styles.container}>
+    <div className={"container"}>
       <h1>Color Control</h1>
 
-      <div className={styles.grid}>
+      <div className={"grid"}>
         <Card
           name="White"
           onOrOff={false}
           brightness={false}
           temp={false}
           color={"#ffffff"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
 
         <Card
@@ -24,8 +24,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#0000ff"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
 
         <Card
@@ -34,8 +34,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#ff0000"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
         <Card
           name="Light Blue"
@@ -43,8 +43,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#0066ff"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
 
         <Card
@@ -53,8 +53,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#ff00ff"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
         <Card
           name="Pink"
@@ -62,8 +62,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#ff0066"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
 
         <Card
@@ -72,8 +72,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#00ffff"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
 
         <Card
@@ -82,8 +82,8 @@ const ColorChange: React.FC<{}> = ({}) => {
           brightness={false}
           temp={false}
           color={"#00ff00"}
-          cardClassName={styles.card}
-          buttonClassName={styles.lightButton}
+          cardClassName={"card"}
+          buttonClassName={"lightButton"}
         />
       </div>
     </div>
