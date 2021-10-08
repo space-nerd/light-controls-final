@@ -1,9 +1,9 @@
 import React from 'react';
-import { Brightness } from '../components/Brightness';
-import ColorChange from '../components/ColorChange';
-import { NavBar } from '../components/NavBar';
-import { Temp } from '../components/Temp';
-import 'App.scss';
+import { Brightness } from './components/Brightness';
+import ColorChange from './components/ColorChange';
+import { NavBar } from './components/NavBar';
+import { Temp } from './components/Temp';
+import './App.scss';
 
 export default function App() {
 	return (

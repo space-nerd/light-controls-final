@@ -1,5 +1,5 @@
 import React from "react";
-import "App.scss";
+import "../App.scss";
 import { Card } from "./Card";
 
 const ColorChange: React.FC<{}> = ({}) => {

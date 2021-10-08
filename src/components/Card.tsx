@@ -1,6 +1,6 @@
 import React from "react";
-import "App.scss";
-import Govee from "../node-govee-led/index";
+import "../App.scss";
+import Govee from "./node-govee-led/index";
 
 const Lamp = new Govee({
   apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
