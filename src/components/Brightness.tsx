@@ -2,7 +2,7 @@ import React from "react";
 import "../App.scss";
 import { Card } from "./Card";
 
-export const Brightness: React.FC<{}> = ({}) => {
+export const Brightness: React.FC<{}> = () => {
   return (
     <div className={"container"}>
       <h1>Brightness Control</h1>

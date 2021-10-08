@@ -2,7 +2,7 @@ import React from "react";
 import "../App.scss";
 import { Card } from "./Card";
 
-export const Temp: React.FC<{}> = ({}) => {
+export const Temp: React.FC<{}> = () => {
   return (
     <div className={"container"}>
       <h1>Temperature Control</h1>

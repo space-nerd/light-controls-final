@@ -2,12 +2,12 @@ import React from "react";
 import "../App.scss";
 import { Card } from "./Card";
 
-const ColorChange: React.FC<{}> = ({}) => {
+const ColorChange: React.FC<{}> = () => {
   return (
     <div className={"container"}>
       <h1>Color Control</h1>
 
-      <div className={styles.grid}>
+      <div className={"grid"}>
         <Card
           name="White"
           onOrOff={false}

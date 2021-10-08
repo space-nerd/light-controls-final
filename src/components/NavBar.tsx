@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 interface NavBarProps {}
 
-export const NavBar: React.FC<NavBarProps> = ({}) => {
+export const NavBar: React.FC<NavBarProps> = () => {
   return (
     <div className={"container"}>
       <nav className={"navbar"}>
