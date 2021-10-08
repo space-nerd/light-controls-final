@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Home.module.scss";
+import "App.scss";
 import Govee from "../node-govee-led/index";
 
 const Lamp = new Govee({
