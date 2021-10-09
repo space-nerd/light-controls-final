@@ -1,14 +1,14 @@
 import React from "react";
 import "../App.scss";
-import Govee from "../node-govee-led/index";
+import { GoveeLED } from "../node-govee-led/index";
 
-const Lamp = new Govee({
+const Lamp = new GoveeLED({
   apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
   mac: "1d:e7:7c:a6:b0:13:b8:e9",
   model: "H6003",
 });
 
-const Desk = new Govee({
+const Desk = new GoveeLED({
   apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
   mac: "75:b5:7c:a6:b0:13:ba:9e",
   model: "H6003",
@@ -35,7 +35,7 @@ function LampTask(
   if (color) {
     Lamp.setColor(color);
   }
-  Lamp.getState().then(state => console.log(state));
+  Lamp.getState().then((state) => console.log(state));
 }
 
 function DeskTask(
@@ -59,7 +59,7 @@ function DeskTask(
   if (color) {
     Desk.setColor(color);
   }
-  Desk.getState().then(state => console.log(state));
+  Desk.getState().then((state) => console.log(state));
 }
 
 interface CardProps {
@@ -71,7 +71,6 @@ interface CardProps {
   buttonClassName: string;
   cardClassName: string;
 }
-
 
 export const Card: React.FC<CardProps> = ({
   name,

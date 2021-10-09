@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/node-govee-led/index.js"  ],
   "exclude": [
     "node_modules"
   ]
