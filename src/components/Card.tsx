@@ -1,14 +1,14 @@
 import React from "react";
 import "../App.scss";
-import { GoveeLED } from "../node-govee-led/index";
+import goveeApiWrapper from "govee-api-wrapper";
 
-const Lamp = new GoveeLED({
+export const Lamp = new goveeApiWrapper({
   apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
   mac: "1d:e7:7c:a6:b0:13:b8:e9",
   model: "H6003",
 });
 
-const Desk = new GoveeLED({
+export const Desk = new goveeApiWrapper({
   apiKey: "8a17da1f-c1e9-4a1d-8295-6b1360595bb6",
   mac: "75:b5:7c:a6:b0:13:ba:9e",
   model: "H6003",
@@ -35,7 +35,6 @@ function LampTask(
   if (color) {
     Lamp.setColor(color);
   }
-  Lamp.getState().then((state) => console.log(state));
 }
 
 function DeskTask(
@@ -59,7 +58,6 @@ function DeskTask(
   if (color) {
     Desk.setColor(color);
   }
-  Desk.getState().then((state) => console.log(state));
 }
 
 interface CardProps {

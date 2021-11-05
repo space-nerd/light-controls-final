@@ -1,85 +1,74 @@
 import React from "react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Slider,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderTrack,
+  Text,
+} from "@chakra-ui/react";
 import "../App.scss";
-import { Card } from "./Card";
+import { Lamp, Desk } from "./Card";
 
 export const Temp: React.FC<{}> = () => {
   return (
-    <div className={"container"}>
-      <h1>Temperature Control</h1>
-      <div className={"grid"}>
-        <Card
-          name="9000"
-          onOrOff={false}
-          brightness={false}
-          temp={9000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="8000"
-          onOrOff={false}
-          brightness={false}
-          temp={8000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="7000"
-          onOrOff={false}
-          brightness={false}
-          temp={7000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="6000"
-          onOrOff={false}
-          brightness={false}
-          temp={6000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="5000"
-          onOrOff={false}
-          brightness={false}
-          temp={5000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="4000"
-          onOrOff={false}
-          brightness={false}
-          temp={4000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="3000"
-          onOrOff={false}
-          brightness={false}
-          temp={3000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-        <Card
-          name="2000"
-          onOrOff={false}
-          brightness={false}
-          temp={2000}
-          color={false}
-          cardClassName={"card"}
-          buttonClassName={"lightButton"}
-        />
-      </div>
-    </div>
+    <Grid
+      h="400px"
+      w="250px"
+      templateRows="repeat(3, 1fr)"
+      templateColumns="repeat(2, 1fr)"
+      gap={5}
+      ml={[5, 125, 250]}
+      mr={[5, 125, 250]}
+      bg={"gray.800"}
+      borderRadius={10}
+      padding={5}
+    >
+      <GridItem colSpan={2}>
+        <Text fontSize={"3xl"}>Color Temp Control</Text>
+      </GridItem>
+      <GridItem>
+        <Text>Lamp</Text>
+        <Slider
+          defaultValue={6000}
+          min={2000}
+          max={9000}
+          step={1000}
+          size={"lg"}
+          onChangeEnd={(val) => Lamp.setColorTemp(val)}
+          orientation="vertical"
+          minH={"200"}
+          aria-label={"Lamp"}
+        >
+          <SliderTrack bg="blue.500">
+            <Box position="relative" right={10} />
+            <SliderFilledTrack bg="blue" />
+          </SliderTrack>
+          <SliderThumb boxSize={6} />
+        </Slider>
+      </GridItem>
+      <GridItem>
+        <Text>Desk</Text>
+        <Slider
+          defaultValue={6000}
+          min={2000}
+          max={9000}
+          step={1000}
+          size={"lg"}
+          onChangeEnd={(val) => Desk.setColorTemp(val)}
+          orientation="vertical"
+          minH={"200"}
+          aria-label={"Lamp"}
+        >
+          <SliderTrack bg="blue.500">
+            <Box position="relative" right={10} />
+            <SliderFilledTrack bg="blue" />
+          </SliderTrack>
+          <SliderThumb boxSize={6} />
+        </Slider>
+      </GridItem>
+    </Grid>
   );
 };
